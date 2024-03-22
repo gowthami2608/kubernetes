@@ -1,0 +1,14 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: jspiders
+spec:
+  containers:
+    - name: c1
+      image: ubuntu
+      command: ["/bin/bash", "-c", "while true; do echo Hi everyone; sleep 5; done"]
+    - name: c2
+      image: ubuntu
+      command: ["/bin/bash", "-c", "while true; do echo Hi everyone; sleep 5; done"]
+  restartPolicy: Never         # Defaults to Always
+

@@ -1,0 +1,11 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: flipkart
+spec:
+  containers:
+    - name: login
+      image: nginx
+      ports:
+       - containerPort: 80
+~

@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: jsp
+spec:
+  replicas: 2
+  selector:
+    matchExpressions:
+      - {key: myname, operator: In, values: [qspider,jspider,pyspider]}
+      - {key: env, operator: NotIn, values: [skillrary]}
+  template:
+    metadata:
+      name: sgpm
+      labels:
+        myname: qspider
+    spec:
+      containers:
+        - name: abc
+          image: ubuntu
+          command: ["/bin/bash", "-c", "while true; do echo Hi everyone; sleep 5; done"]

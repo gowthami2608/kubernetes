@@ -1,0 +1,12 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: testfreshers
+  labels:
+    department: DevOps
+    batch: marcos
+spec:
+    containers:
+       - name: demo
+         image: ubuntu
+         command: ["/bin/bash", "-c", "while true; do echo testfreshers; done"]
