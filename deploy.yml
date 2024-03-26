@@ -1,5 +1,5 @@
-kind: Deployment
 apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: flipkart
 spec:
@@ -9,13 +9,11 @@ spec:
       name: deployment
   template:
     metadata:
-      name: signup
       labels:
         name: deployment
     spec:
-  containers:
-    - name: signup
-      image: httpd
-      ports:
-        - containerPort: 80
-            
+      containers:
+        - name: signup
+          image: httpd
+          ports:
+            - containerPort: 80
